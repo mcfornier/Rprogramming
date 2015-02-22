@@ -1,0 +1,512 @@
+length(fidok[,1])
+fidok
+vAux<-fidok["nitrate"]
+length(vAux)
+length(vAux[,1])
+vAux<-fidok["sulfate"]
+length(vAux[,1])
+length(vsulfate)
+vsulfate<-vector("numeric")
+length(vsulfate)
+vsulfate<-c(vsulfate,vAux[,1])
+length(vsulfate)
+cor(vNitrate,vsulfate)
+corr <- function(directory, threshold = 0) {
+## 'directory' is a character vector of length 1 indicating
+## the location of the CSV files
+## 'threshold' is a numeric vector of length 1 indicating the
+## number of completely observed observations (on all
+## variables) required to compute the correlation between
+## nitrate and sulfate; the default is 0
+## Return a numeric vector of correlations
+allid<-1:332 ##create vector
+##for(i in 1:332)##prepare vector of all ids, unnecessary?
+##{
+##	allid[i]<-i
+##}
+completef<-complete(directory,1:332)##evaluate ids
+idOK<-completef["nobs"]>threshold] ##is with condition ok
+vIdOk<-completef[idOK] ## num complete cases
+idCount<-length(vIdOk)##get id count
+vNitrate<-vector("numeric")
+vsulfate<-vector("numeric")
+vAux<-vector("numeric")
+for (i in 1:idcount)
+{
+if(vIdOk[i]<10)
+filename<-paste("00",as.character(vIdOk[i]),sep='')
+else if(vIdOk[i]>=10 && vIdOk[i]<100)
+filename<-paste("0",as.character(vIdOk[i]),sep='')
+else
+filename<-as.character(vIdOk[i])
+fid <- read.csv(file=paste(path,directory,"\\",filename,".csv",sep=''),header=TRUE) ##load frame to read
+vOK<-complete.cases(fid) ##vector with ok indexes
+fidok<-fid[vOK,]##frame with complete cases
+vAux<-fidok["nitrate"]##just nitrate
+vNitrate<-c(vNitrate,vAux[,1])##append to vector
+vAux<-fidok["sulfate"]#just sulfate
+vsulfate<-c(vsulfate,vAux[,1])##append to vector
+}
+cor(vNitrate,vsulfate)
+}
+corr <- function(directory, threshold = 0) {
+## 'directory' is a character vector of length 1 indicating
+## the location of the CSV files
+## 'threshold' is a numeric vector of length 1 indicating the
+## number of completely observed observations (on all
+## variables) required to compute the correlation between
+## nitrate and sulfate; the default is 0
+## Return a numeric vector of correlations
+completef<-complete(directory,1:332)##evaluate ids
+idOK<-completef["nobs"]>threshold] ##is with condition ok
+vIdOk<-completef[idOK] ## num complete cases
+idCount<-length(vIdOk)##get id count
+vNitrate<-vector("numeric")
+vsulfate<-vector("numeric")
+vAux<-vector("numeric")
+for (i in 1:idcount)
+{
+}
+cor(vNitrate,vsulfate)
+}
+corr <- function(directory, threshold = 0) {
+## 'directory' is a character vector of length 1 indicating
+## the location of the CSV files
+## 'threshold' is a numeric vector of length 1 indicating the
+## number of completely observed observations (on all
+## variables) required to compute the correlation between
+## nitrate and sulfate; the default is 0
+## Return a numeric vector of correlations
+completef<-complete(directory,1:332)##evaluate ids
+idOK<-completef["nobs"]>threshold] ##is with condition ok
+vIdOk<-completef[idOK] ## num complete cases
+idCount<-length(vIdOk)##get id count
+vNitrate<-vector("numeric")
+vsulfate<-vector("numeric")
+vAux<-vector("numeric")
+for (i in 1:idCount)
+{
+}
+cor(vNitrate,vsulfate)
+}
+corr <- function(directory, threshold = 0) {
+## 'directory' is a character vector of length 1 indicating
+## the location of the CSV files
+## 'threshold' is a numeric vector of length 1 indicating the
+## number of completely observed observations (on all
+## variables) required to compute the correlation between
+## nitrate and sulfate; the default is 0
+## Return a numeric vector of correlations
+for (i in 1:idCount)
+{
+}
+cor(vNitrate,vsulfate)
+}
+corr <- function(directory, threshold = 0) {
+## 'directory' is a character vector of length 1 indicating
+## the location of the CSV files
+## 'threshold' is a numeric vector of length 1 indicating the
+## number of completely observed observations (on all
+## variables) required to compute the correlation between
+## nitrate and sulfate; the default is 0
+## Return a numeric vector of correlations
+completef<-complete(directory,1:332)##evaluate ids
+idOK<-completef["nobs"]>threshold] ##is with condition ok
+vIdOk<-completef[idOK] ## num complete cases
+for (i in 1:idCount)
+{
+}
+cor(vNitrate,vsulfate)
+}
+idOK<-completef["nobs"]>threshold
+idOK<-completef["nobs"]>5
+corr <- function(directory, threshold = 0) {
+## 'directory' is a character vector of length 1 indicating
+## the location of the CSV files
+## 'threshold' is a numeric vector of length 1 indicating the
+## number of completely observed observations (on all
+## variables) required to compute the correlation between
+## nitrate and sulfate; the default is 0
+## Return a numeric vector of correlations
+completef<-complete(directory,1:332)##evaluate ids
+idOK<-completef["nobs"]>threshold ##is with condition ok
+vIdOk<-completef[idOK] ## num complete cases
+idCount<-length(vIdOk)##get id count
+vNitrate<-vector("numeric")
+vsulfate<-vector("numeric")
+vAux<-vector("numeric")
+for (i in 1:idCount)
+{
+if(vIdOk[i]<10)
+filename<-paste("00",as.character(vIdOk[i]),sep='')
+else if(vIdOk[i]>=10 && vIdOk[i]<100)
+filename<-paste("0",as.character(vIdOk[i]),sep='')
+else
+filename<-as.character(vIdOk[i])
+fid <- read.csv(file=paste(path,directory,"\\",filename,".csv",sep=''),header=TRUE) ##load frame to read
+vOK<-complete.cases(fid) ##vector with ok indexes
+fidok<-fid[vOK,]##frame with complete cases
+vAux<-fidok["nitrate"]##just nitrate
+vNitrate<-c(vNitrate,vAux[,1])##append to vector
+vAux<-fidok["sulfate"]#just sulfate
+vsulfate<-c(vsulfate,vAux[,1])##append to vector
+}
+cor(vNitrate,vsulfate)
+}
+cr <- corr("specdata", 150)
+corr <- function(directory, threshold = 0) {
+## 'directory' is a character vector of length 1 indicating
+## the location of the CSV files
+## 'threshold' is a numeric vector of length 1 indicating the
+## number of completely observed observations (on all
+## variables) required to compute the correlation between
+## nitrate and sulfate; the default is 0
+## Return a numeric vector of correlations
+path<-"C:\\Users\\carmen.fornier\\Documents\\Rworkingdirectory\\"
+completef<-complete(directory,1:332)##evaluate ids
+idOK<-completef["nobs"]>threshold ##is with condition ok
+vIdOk<-completef[idOK] ## num complete cases
+idCount<-length(vIdOk)##get id count
+vNitrate<-vector("numeric")
+vsulfate<-vector("numeric")
+vAux<-vector("numeric")
+for (i in 1:idCount)
+{
+if(vIdOk[i]<10)
+filename<-paste("00",as.character(vIdOk[i]),sep='')
+else if(vIdOk[i]>=10 && vIdOk[i]<100)
+filename<-paste("0",as.character(vIdOk[i]),sep='')
+else
+filename<-as.character(vIdOk[i])
+fid <- read.csv(file=paste(path,directory,"\\",filename,".csv",sep=''),header=TRUE) ##load frame to read
+vOK<-complete.cases(fid) ##vector with ok indexes
+fidok<-fid[vOK,]##frame with complete cases
+vAux<-fidok["nitrate"]##just nitrate
+vNitrate<-c(vNitrate,vAux[,1])##append to vector
+vAux<-fidok["sulfate"]#just sulfate
+vsulfate<-c(vsulfate,vAux[,1])##append to vector
+}
+cor(vNitrate,vsulfate)
+}
+cr <- corr("specdata", 150)
+idOK<-completef["nobs"]>10
+idOk
+idOK
+vIdOk<-completef[idOK]
+vIdOk
+View(completef)
+View(completef)
+idOK<-completef["nobs"]>100
+idOK<-completef["nobs"]>500
+vIdOk
+completef["nobs"]>500
+completef[idOK]
+idCount<-length(vIdOk)idCount<-length(vIdOk)
+idCount<-length(vIdOk)
+idCount
+vIdOk
+completef[idOK]
+idOK<-completef["nobs"]>500
+idOK
+completef[idOK]
+vIdOk
+vIdOk<-completef[idOK]
+vIdOk
+length(vIdOk)
+completef[idOK]
+View(completef)
+completef["id"]
+completef[idOK,]
+completef[idOK,]["id"]
+length(completef[idOK,]["id"])
+length(completef[idOK,]["id"])
+vIdOk<-completef[idOK,]["id"]
+vIdOk
+length(vIdOk)
+length(vIdOk[1])
+class(vIdOk)
+class(vIdOk[,1])
+length(vIdOk[,1])
+corr <- function(directory, threshold = 0) {
+## 'directory' is a character vector of length 1 indicating
+## the location of the CSV files
+## 'threshold' is a numeric vector of length 1 indicating the
+## number of completely observed observations (on all
+## variables) required to compute the correlation between
+## nitrate and sulfate; the default is 0
+## Return a numeric vector of correlations
+path<-"C:\\Users\\carmen.fornier\\Documents\\Rworkingdirectory\\"
+completef<-complete(directory,1:332)##evaluate ids
+idOK<-completef["nobs"]>threshold ##is with condition ok
+vIdOk<-completef[idOK,]["id"] ## num complete cases
+idCount<-length(vIdOk[,1])##get id count
+vNitrate<-vector("numeric")
+vsulfate<-vector("numeric")
+vAux<-vector("numeric")
+for (i in 1:idCount)
+{
+if(vIdOk[i]<10)
+filename<-paste("00",as.character(vIdOk[i]),sep='')
+else if(vIdOk[i]>=10 && vIdOk[i]<100)
+filename<-paste("0",as.character(vIdOk[i]),sep='')
+else
+filename<-as.character(vIdOk[i])
+fid <- read.csv(file=paste(path,directory,"\\",filename,".csv",sep=''),header=TRUE) ##load frame to read
+vOK<-complete.cases(fid) ##vector with ok indexes
+fidok<-fid[vOK,]##frame with complete cases
+vAux<-fidok["nitrate"]##just nitrate
+vNitrate<-c(vNitrate,vAux[,1])##append to vector
+vAux<-fidok["sulfate"]#just sulfate
+vsulfate<-c(vsulfate,vAux[,1])##append to vector
+}
+cor(vNitrate,vsulfate)
+}
+cr <- corr("specdata", 150)
+head(cr)
+completef[idOK,]["id"]
+completef[idOK,][["id"]]
+length(vIdOk)
+class(vIdOk)
+vIdOk<-completef[idOK,][["id"]]
+class(vIdOk)
+length(vIdOk)
+corr <- function(directory, threshold = 0) {
+## 'directory' is a character vector of length 1 indicating
+## the location of the CSV files
+## 'threshold' is a numeric vector of length 1 indicating the
+## number of completely observed observations (on all
+## variables) required to compute the correlation between
+## nitrate and sulfate; the default is 0
+## Return a numeric vector of correlations
+path<-"C:\\Users\\carmen.fornier\\Documents\\Rworkingdirectory\\"
+completef<-complete(directory,1:332)##evaluate ids
+idOK<-completef["nobs"]>threshold ##is with condition ok
+vIdOk<-completef[idOK,][["id"]] ## num complete cases
+idCount<-length(vIdOk)##get id count
+vNitrate<-vector("numeric")
+vsulfate<-vector("numeric")
+vAux<-vector("numeric")
+for (i in 1:idCount)
+{
+if(vIdOk[i]<10)
+filename<-paste("00",as.character(vIdOk[i]),sep='')
+else if(vIdOk[i]>=10 && vIdOk[i]<100)
+filename<-paste("0",as.character(vIdOk[i]),sep='')
+else
+filename<-as.character(vIdOk[i])
+fid <- read.csv(file=paste(path,directory,"\\",filename,".csv",sep=''),header=TRUE) ##load frame to read
+vOK<-complete.cases(fid) ##vector with ok indexes
+fidok<-fid[vOK,]##frame with complete cases
+vAux<-fidok["nitrate"]##just nitrate
+vNitrate<-c(vNitrate,vAux[,1])##append to vector
+vAux<-fidok["sulfate"]#just sulfate
+vsulfate<-c(vsulfate,vAux[,1])##append to vector
+}
+cor(vNitrate,vsulfate)
+}
+cr <- corr("specdata", 150)
+head(cr)
+cor(vNitrate,vsulfate)
+vOK<-complete.cases(fid)
+vOK
+fidok<-fid[vOK,]
+fidok
+vAux<-fidok["nitrate"]
+vNitrate<-c(vNitrate,vAux[,1])
+vAux<-fidok["sulfate"]
+vsulfate<-c(vsulfate,vAux[,1])
+cor(vNitrate,vsulfate)
+vNitrate
+?cor
+cr <- corr("specdata", 150)
+{
+## 'directory' is a character vector of length 1 indicating
+## the location of the CSV files
+## 'threshold' is a numeric vector of length 1 indicating the
+## number of completely observed observations (on all
+## variables) required to compute the correlation between
+## nitrate and sulfate; the default is 0
+## Return a numeric vector of correlations
+path<-"C:\\Users\\carmen.fornier\\Documents\\Rworkingdirectory\\"
+completef<-complete(directory,1:332)##evaluate ids
+idOK<-completef["nobs"]>threshold ##is with condition ok
+vIdOk<-completef[idOK,][["id"]] ## num complete cases
+idCount<-length(vIdOk)##get id count
+vNitrate<-vector("numeric")
+vsulfate<-vector("numeric")
+vAuxn<-vector("numeric")
+vAuxs<-vector("numeric")
+vres<-vector("numeric")
+for (i in 1:idCount)
+{
+if(vIdOk[i]<10)
+filename<-paste("00",as.character(vIdOk[i]),sep='')
+else if(vIdOk[i]>=10 && vIdOk[i]<100)
+filename<-paste("0",as.character(vIdOk[i]),sep='')
+else
+filename<-as.character(vIdOk[i])
+fid <- read.csv(file=paste(path,directory,"\\",filename,".csv",sep=''),header=TRUE) ##load frame to read
+vOK<-complete.cases(fid) ##vector with ok indexes
+fidok<-fid[vOK,]##frame with complete cases
+vAuxn<-fidok["nitrate"]##just nitrate
+##vNitrate<-c(vNitrate,vAux[,1])##append to vector
+vAuxs<-fidok["sulfate"]#just sulfate
+##vsulfate<-c(vsulfate,vAux[,1])##append to vector
+vres<-c(vres,cor(vAuxn,vsulfate))
+}
+##cor(vNitrate,vsulfate)
+vres
+}
+corr <- function(directory, threshold = 0) {
+## 'directory' is a character vector of length 1 indicating
+## the location of the CSV files
+## 'threshold' is a numeric vector of length 1 indicating the
+## number of completely observed observations (on all
+## variables) required to compute the correlation between
+## nitrate and sulfate; the default is 0
+## Return a numeric vector of correlations
+path<-"C:\\Users\\carmen.fornier\\Documents\\Rworkingdirectory\\"
+completef<-complete(directory,1:332)##evaluate ids
+idOK<-completef["nobs"]>threshold ##is with condition ok
+vIdOk<-completef[idOK,][["id"]] ## num complete cases
+idCount<-length(vIdOk)##get id count
+vNitrate<-vector("numeric")
+vsulfate<-vector("numeric")
+vAuxn<-vector("numeric")
+vAuxs<-vector("numeric")
+vres<-vector("numeric")
+for (i in 1:idCount)
+{
+if(vIdOk[i]<10)
+filename<-paste("00",as.character(vIdOk[i]),sep='')
+else if(vIdOk[i]>=10 && vIdOk[i]<100)
+filename<-paste("0",as.character(vIdOk[i]),sep='')
+else
+filename<-as.character(vIdOk[i])
+fid <- read.csv(file=paste(path,directory,"\\",filename,".csv",sep=''),header=TRUE) ##load frame to read
+vOK<-complete.cases(fid) ##vector with ok indexes
+fidok<-fid[vOK,]##frame with complete cases
+vAuxn<-fidok["nitrate"]##just nitrate
+##vNitrate<-c(vNitrate,vAux[,1])##append to vector
+vAuxs<-fidok["sulfate"]#just sulfate
+##vsulfate<-c(vsulfate,vAux[,1])##append to vector
+vres<-c(vres,cor(vAuxn,vsulfate))
+}
+##cor(vNitrate,vsulfate)
+vres
+}
+cr <- corr("specdata", 150)
+corr <- function(directory, threshold = 0) {
+## 'directory' is a character vector of length 1 indicating
+## the location of the CSV files
+## 'threshold' is a numeric vector of length 1 indicating the
+## number of completely observed observations (on all
+## variables) required to compute the correlation between
+## nitrate and sulfate; the default is 0
+## Return a numeric vector of correlations
+path<-"C:\\Users\\carmen.fornier\\Documents\\Rworkingdirectory\\"
+completef<-complete(directory,1:332)##evaluate ids
+idOK<-completef["nobs"]>threshold ##is with condition ok
+vIdOk<-completef[idOK,][["id"]] ## num complete cases
+idCount<-length(vIdOk)##get id count
+vNitrate<-vector("numeric")
+vsulfate<-vector("numeric")
+vAuxn<-vector("numeric")
+vAuxs<-vector("numeric")
+vres<-vector("numeric")
+for (i in 1:idCount)
+{
+if(vIdOk[i]<10)
+filename<-paste("00",as.character(vIdOk[i]),sep='')
+else if(vIdOk[i]>=10 && vIdOk[i]<100)
+filename<-paste("0",as.character(vIdOk[i]),sep='')
+else
+filename<-as.character(vIdOk[i])
+fid <- read.csv(file=paste(path,directory,"\\",filename,".csv",sep=''),header=TRUE) ##load frame to read
+vOK<-complete.cases(fid) ##vector with ok indexes
+fidok<-fid[vOK,]##frame with complete cases
+vAuxn<-fidok["nitrate"]##just nitrate
+##vNitrate<-c(vNitrate,vAux[,1])##append to vector
+vAuxs<-fidok["sulfate"]#just sulfate
+##vsulfate<-c(vsulfate,vAux[,1])##append to vector
+vres<-c(vres,cor(vAuxn,vAuxs))
+}
+##cor(vNitrate,vsulfate)
+vres
+}
+cr <- corr("specdata", 150)
+cr
+head(cr)
+submit()
+submit()
+submit()
+submit()
+cr <- corr("specdata", 150)
+corr("specdata", 15)
+corr("specdata", 0)
+corr("specdata")
+cr <- corr("specdata", 150)
+summary(cr)
+cr <- corr("specdata", 400)
+summary(cr)
+cr <- corr("specdata", 5000)
+idOK<-completef["nobs"]>5000
+idOK
+vIdOk<-completef[idOK,][["id"]]
+vIdOk
+idCount<-length(vIdOk)
+idCount
+1:0
+vIdOk[1]
+vIdOk[1]<10
+corr <- function(directory, threshold = 0) {
+## 'directory' is a character vector of length 1 indicating
+## the location of the CSV files
+## 'threshold' is a numeric vector of length 1 indicating the
+## number of completely observed observations (on all
+## variables) required to compute the correlation between
+## nitrate and sulfate; the default is 0
+## Return a numeric vector of correlations
+path<-"C:\\Users\\carmen.fornier\\Documents\\Rworkingdirectory\\"
+completef<-complete(directory,1:332)##evaluate ids
+idOK<-completef["nobs"]>threshold ##is with condition ok
+vIdOk<-completef[idOK,][["id"]] ## num complete cases
+idCount<-length(vIdOk)##get id count
+vNitrate<-vector("numeric")
+vsulfate<-vector("numeric")
+vAuxn<-vector("numeric")
+vAuxs<-vector("numeric")
+vres<-vector("numeric")
+if(idCount>0)
+{
+for (i in 1:idCount)
+{
+if(vIdOk[i]<10)
+filename<-paste("00",as.character(vIdOk[i]),sep='')
+else if(vIdOk[i]>=10 && vIdOk[i]<100)
+filename<-paste("0",as.character(vIdOk[i]),sep='')
+else
+filename<-as.character(vIdOk[i])
+fid <- read.csv(file=paste(path,directory,"\\",filename,".csv",sep=''),header=TRUE) ##load frame to read
+vOK<-complete.cases(fid) ##vector with ok indexes
+fidok<-fid[vOK,]##frame with complete cases
+vAuxn<-fidok["nitrate"]##just nitrate
+##vNitrate<-c(vNitrate,vAux[,1])##append to vector
+vAuxs<-fidok["sulfate"]#just sulfate
+##vsulfate<-c(vsulfate,vAux[,1])##append to vector
+vres<-c(vres,cor(vAuxn,vAuxs))
+}
+}
+##cor(vNitrate,vsulfate)
+vres
+}
+cr <- corr("specdata", 5000)
+summary(cr)
+length(cr)
+cr <- corr("specdata")
+summary(cr)
+length(cr)
+submit
+submit()
+submit()
+savehistory("~/Rworkingdirectory/.RhistoryW2Assignement")
